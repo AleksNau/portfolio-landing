@@ -1,0 +1,88 @@
+.footer {
+  margin: 0 auto;
+  max-width: 49%;
+  padding: 114px 0 123px 0;
+}
+
+.footer__title {
+  margin: 0;
+  color: #070707;
+  text-align: center;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 20px;
+}
+
+.footer__paragraph {
+  margin: 0;
+  color: #070707;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 27px;
+}
+
+.footer__feedback {
+  display: block;
+  margin: 0 auto;
+  width: 180.5px;
+  height: 42px;
+  background: #070707;
+  color: #FFF;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.footer__contacts {
+  padding: 87px 0 0 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 49%;
+}
+
+.footer__item{
+  width: 40px;
+  height: 40px;
+}
+
+.footer__button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: url("images/IN.svg") transparent center no-repeat;
+}
+
+.footer__like-me {
+  padding-top: 46px;
+  margin: 0;
+  color: #828282;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer {
+
+  }
+}

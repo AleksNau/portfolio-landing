@@ -1,0 +1,37 @@
+.switcher {
+  margin: 0;
+  padding: 0 0 0 0;
+  height: 65px;
+}
+
+.switcher__list {
+  transform: rotate(-90deg);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  list-style-type: none;
+  width: 65px;
+  height: 20px;
+  margin: 0;
+  padding: 0 0 0 0;
+}
+
+.switcher__item {
+  color: #828282;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .switcher {
+
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .switcher {
+
+  }
+}
