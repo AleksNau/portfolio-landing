@@ -1,5 +1,11 @@
+
+@mixin adaptiveFormula($minpx,$min,$max) {
+  width: calc($minpx + ($max - $min) * ((100vw - 375px) / (1445 - 375)));
+}
+
 .promo {
-  max-width: 65%;
+  @include adaptiveFormula(316px,316,943);//65%
+
   margin: 0 auto;
   padding: 0 0 104px 0;
 }
@@ -38,7 +44,7 @@ max-width: 95px;
 }
 
 @media screen and (max-width: 768px) {
-  .promo {
+  .promo__image {
 
   }
 }
