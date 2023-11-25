@@ -1,7 +1,5 @@
 
-@mixin adaptiveFormula($minpx,$min,$max) {
-  width: calc($minpx + ($max - $min) * ((100vw - 375px) / (1445 - 375)));
-}
+
 
 .promo {
   //@include adaptiveFormula(316px,316,943);//65%
