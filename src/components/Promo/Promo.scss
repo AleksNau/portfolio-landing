@@ -4,8 +4,8 @@
 }
 
 .promo {
-  @include adaptiveFormula(316px,316,943);//65%
-
+  //@include adaptiveFormula(316px,316,943);//65%
+  width: 65%;
   margin: 0 auto;
   padding: 0 0 104px 0;
 }
@@ -43,14 +43,14 @@ max-width: 95px;
   object-fit: cover;
 }
 
-@media screen and (max-width: 768px) {
-  .promo__image {
-
+@media screen and (max-width: 1280px) {
+  .promo {
+    width: 75%;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
   .promo {
-
+    width: 84%;
   }
 }

@@ -4,14 +4,11 @@ import "./AboutMe.scss";
 const AboutMe = () => {
     return (
         <section className="about-me">
-            <h2 className="about-me__title">About me</h2>
-            <p className="about-me__paragraph">Hi, I'm Denis – UX/UI designer from Minsk.
-                I'm interested in design and everything connected with it.
+            <h2 className="about-me__title">Обо мне</h2>
+            <p className="about-me__paragraph">Привет! Меня зовут Алексей и я веб-разработчик с опытом работы на React.js.
                 </p>
-            <p className="about-me__paragraph">I'm studying at courses "Web and mobile design
-                interfaces" in IT-Academy.</p>
-            <p className="about-me__paragraph">Ready to implement excellent projects
-                with wonderful people.</p>
+            <p className="about-me__paragraph">Я работаю с JavaScript, HTML и CSS, и мне нравится изучать новые возможности и инструменты в этой области.</p>
+            <p className="about-me__paragraph">Буду рад вашим предложениям и обратной связи!</p>
         </section>
     );
 };

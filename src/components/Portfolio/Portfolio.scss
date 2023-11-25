@@ -59,14 +59,14 @@
   text-decoration-line: underline;
 }
 
-@media screen and (max-width: 768px) {
-  .portfolio {
-
+@media screen and (max-width: 1280px) {
+  .portfolio__list {
+    width: 75%;
   }
 }
 
-@media screen and (max-width: 320px) {
-  .portfolio {
-
+@media screen and (max-width: 500px) {
+  .portfolio__list {
+    width: 84%;
   }
 }
