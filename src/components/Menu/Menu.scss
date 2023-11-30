@@ -1,3 +1,8 @@
+@mixin adaptiv-font($pcSize, $mobSize) {
+    font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 1280px) / (1445 - 1280)));
+
+}
+
 .menu {
     box-sizing: border-box;
     margin: 0;
@@ -27,13 +32,12 @@
 }
 
 .menu__link {
+    @include adaptiv-font(18,16);
     display: block;
     text-decoration: none;
     cursor: pointer;
     color: #828282;
-
-    font-size: 18px;
-    font-style: normal;
+     font-style: normal;
     font-weight: 400;
     line-height: normal;
     -webkit-transition: color linear .4s;
@@ -48,6 +52,9 @@
 @media screen and (max-width: 1280px) {
     .menu {
 
+    }
+    .menu__link {
+        font-size: 18px;
     }
 }
 

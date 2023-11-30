@@ -1,8 +1,9 @@
+@mixin adaptiv-font($pcSize, $mobSize) {
+  font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 1280px) / (1445 - 1280)));
 
-
+}
 
 .promo {
-  //@include adaptiveFormula(316px,316,943);//65%
   width: 65%;
   margin: 0 auto;
   padding: 0 0 104px 0;
@@ -16,20 +17,21 @@
 }
 
 .promo__title {
+  @include adaptiv-font(47,45);
   margin: 0;
   color: #070707;
-max-width: 95px;
-  font-size: 47.339px;
+  max-width: 95px;
+
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
 .promo__job {
+  @include adaptiv-font(18,16);
   margin: 0;
   color: #070707;
 
-  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;

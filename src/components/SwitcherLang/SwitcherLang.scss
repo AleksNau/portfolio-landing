@@ -1,3 +1,7 @@
+@mixin adaptiv-font($pcSize, $mobSize) {
+  font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 1280px) / (1445 - 1280)));
+}
+
 .switcher {
   margin: 0;
   padding: 0 0 0 0;
@@ -17,8 +21,8 @@
 }
 
 .switcher__item {
+  @include adaptiv-font(16,14);
   color: #828282;
-  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;

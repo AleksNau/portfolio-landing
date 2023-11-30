@@ -6,7 +6,7 @@ import promoImage from './images/promo-image.jpg'
 
 const Promo = () => {
     return (
-        <section className="promo">
+        <section className="promo" id="mainpage">
             <div className="promo__container">
                 <h1 className="promo__title">Alex Now</h1>
                 <h2 className="promo__job">Web-developer</h2>

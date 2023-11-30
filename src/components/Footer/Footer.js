@@ -1,30 +1,41 @@
 import React from "react";
 import "./Footer.scss";
+import linkedin from "./images/linkedin.svg";
+import insta from "./images/instagram.svg";
+import vk from "./images/vk.svg";
+import telegram from "./images/telegram.svg";
 
 const Footer = () => {
     return (
-        <footer className="footer">
-            <h2 className="footer__title">Contacts</h2>
-            <p className="footer__paragraph">Want to know more or just chat?
-                You are welcome!</p>
-            <button className="footer__feedback">Send message</button>
+        <footer className="footer" id="contacts">
+            <h2 className="footer__title">Контакты</h2>
+            <p className="footer__paragraph">Хотите узнать больше? Отправьте мне сообщение!</p>
+            <button className="footer__feedback">Связаться</button>
             <ul className="footer__contacts">
                 <li className="footer__item">
-                    <button className="footer__button"/>
+                        <a href="https://www.linkedin.com/in/aleks-naumenko/" className="footer__link" target='_blank' rel="noreferrer">
+                            <img src={linkedin} alt="icon" className="footer__button"/>
+                        </a>
                 </li>
                 <li className="footer__item">
-                    <button className="footer__button"/>
+                    <a href="https://vk.com/corpserevivers" className="footer__link" target='_blank' rel="noreferrer">
+                        <img src={vk} alt="icon" className="footer__button"/>
+                    </a>
                 </li>
                 <li className="footer__item">
-                    <button className="footer__button"/>
+                    <a href="https://www.instagram.com/" className="footer__link" target='_blank' rel="noreferrer">
+                        <img src={insta} alt="icon" className="footer__button"/>
+                    </a>
                 </li>
                 <li className="footer__item">
-                    <button className="footer__button"/>
+                    <a href="https://t.me/AleksNoww" className="footer__link" target='_blank' rel="noreferrer">
+                        <img src={telegram} alt="icon" className="footer__button"/>
+                    </a>
                 </li>
             </ul>
 
             <p className="footer__like-me">Like me on
-                LinkedIn, Instagram, Behance, Dribble</p>
+                LinkedIn, Instagram, Telegram, Vkontakte</p>
         </footer>
     );
 };

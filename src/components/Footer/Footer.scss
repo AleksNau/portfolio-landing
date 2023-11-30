@@ -1,14 +1,20 @@
+@mixin adaptiv-font($pcSize, $mobSize) {
+  font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 1280px) / (1445 - 1280)));
+
+}
+
 .footer {
   margin: 0 auto;
   max-width: 49%;
+  min-height: 100%;
   padding: 114px 0 123px 0;
 }
 
 .footer__title {
+  @include adaptiv-font(34,32);
   margin: 0;
   color: #070707;
   text-align: center;
-  font-size: 34px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -16,10 +22,10 @@
 }
 
 .footer__paragraph {
+  @include adaptiv-font(18,16);
   margin: 0;
   color: #070707;
   text-align: center;
-  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -27,14 +33,14 @@
 }
 
 .footer__feedback {
+  @include adaptiv-font(18,16);
   display: block;
   margin: 0 auto;
-  width: 180.5px;
-  height: 42px;
+  width: calc(180px + (220 - 180) * ((100vw - 375px) / (1445 - 375)));
+  height: calc(42px + (50 - 42) * ((100vw - 375px) / (1445 - 375)));
   background: #070707;
   color: #FFF;
   text-align: center;
-  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -53,23 +59,23 @@
 }
 
 .footer__item{
-  width: 40px;
-  height: 40px;
+  width: calc(40px + (70 - 40) * ((100vw - 320px) / (1445 - 375)));
+  height: calc(40px + (70 - 40) * ((100vw - 320px) / (1445 - 375)));
 }
 
 .footer__button {
-  width: 40px;
-  height: 40px;
+  width: calc(40px + (70 - 40) * ((100vw - 320px) / (1445 - 375)));
+  height: calc(40px + (70 - 40) * ((100vw - 320px) / (1445 - 375)));
   border: none;
-  background: url("images/IN.svg") transparent center no-repeat;
+
 }
 
 .footer__like-me {
+  @include adaptiv-font(14,12);
   padding-top: 46px;
   margin: 0;
   color: #828282;
   text-align: center;
-  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -77,12 +83,26 @@
 
 @media screen and (max-width: 1280px) {
   .footer {
-
+    max-width: 75%;
   }
+
+  .footer__contacts {
+    max-width: 75%;
+  }
+
 }
 
 @media screen and (max-width: 500px) {
   .footer {
+    max-width: 84%;
+  }
 
+  .footer__contacts {
+    max-width: 84%;
+    gap: 15px;
+  }
+
+  .footer__feedback {
+    width: 100%;
   }
 }

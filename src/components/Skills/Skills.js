@@ -7,7 +7,7 @@ import redux from './images/redux.png'
 
 const Skills = () => {
     return (
-        <section className="skills">
+        <section className="skills" id="skills">
             <h2 className="skills__title">Навыки</h2>
             <p className="skills__paragraph">Я работаю как с frontend разработкой так и backend разработкой.
                 Работаю с React Hooks, Context, Rest API, Figma, PhotoShop, Postman, Node.js.

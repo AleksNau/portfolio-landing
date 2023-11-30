@@ -1,0 +1,9 @@
+@mixin adaptiv-font($pcSize, $mobSize) {
+  font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 1280px) / (1445 - 1280)));
+  @media (max-width: 1280px) {
+    font-size: $pcSize;
+  }
+  @media (min-width: 500px) {
+    font-size: $mobSize;
+  }
+}

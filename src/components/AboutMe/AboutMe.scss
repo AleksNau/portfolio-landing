@@ -1,3 +1,6 @@
+@mixin adaptiv-font($pcSize, $mobSize) {
+  font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 1280px) / (2000 - 1280)));
+}
 .about-me {
   margin: 0;
   padding: 120px 0 107px 0;
@@ -6,10 +9,10 @@
 }
 
 .about-me__title {
+  @include adaptiv-font(34,32);
   margin: 0;
   color: #070707;
   text-align: center;
-  font-size: 34px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -17,12 +20,12 @@
 }
 
 .about-me__paragraph {
+  @include adaptiv-font(18,16);
   margin: 0 auto;
   max-width: 49%;
   color: #070707;
   text-align: center;
 
-  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -36,10 +39,18 @@
   .about-me {
 
   }
+
+  .about-me__paragraph {
+    max-width: 75%;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .about-me {
 
+  }
+
+  .about-me__paragraph {
+    max-width: 84%;
   }
 }
