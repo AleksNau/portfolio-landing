@@ -1,5 +1,11 @@
 @mixin adaptiv-font($pcSize, $mobSize) {
   font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 1280px) / (720)));
+  @media screen and (max-width: 1280px) {
+    font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 375px) / (1280 - 500)));
+  }
+  @media screen and (max-width: 500px) {
+    font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 375px) / (500 - 375)));
+  }
 }
 
 .skills {
@@ -20,6 +26,10 @@
   @include adaptiv-font(18,16);
   margin: 0;
   text-align: center;
+  padding-bottom: 30px;
+}
+
+.skills__paragraph-last {
   padding-bottom: 84px;
 }
 

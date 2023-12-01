@@ -10,6 +10,8 @@ const Skills = () => {
         <section className="skills" id="skills">
             <h2 className="skills__title">Навыки</h2>
             <p className="skills__paragraph">Я работаю как с frontend разработкой так и backend разработкой.
+            </p>
+            <p className="skills__paragraph skills__paragraph-last">
                 Работаю с React Hooks, Context, Rest API, Figma, PhotoShop, Postman, Node.js.
             </p>
             <ul className="skills__list">

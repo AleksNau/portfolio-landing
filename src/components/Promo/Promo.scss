@@ -1,5 +1,11 @@
 @mixin adaptiv-font($pcSize, $mobSize) {
   font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 1280px) / (720)));
+  @media screen and (max-width: 1280px) {
+    font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 375px) / (1280 - 500)));
+  }
+  @media screen and (max-width: 500px) {
+    font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 375px) / (500 - 375)));
+  }
 
 }
 
@@ -28,7 +34,7 @@
 }
 
 .promo__job {
-  @include adaptiv-font(18,16);
+  @include adaptiv-font(27,24);
   margin: 0;
   color: #070707;
 
@@ -39,13 +45,24 @@
 
 .promo__image {
   width: 100%;
-  height: 387px;
+  height: calc(387px + (478 - 387) * ((100vw - 375px) / (1445 - 375)));
   object-fit: cover;
+  object-position: center top;
+}
+
+.promo__job-conteiner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1280px) {
   .promo {
     width: 75%;
+  }
+
+  .promo__image {
+    object-position: center center;
   }
 }
 
