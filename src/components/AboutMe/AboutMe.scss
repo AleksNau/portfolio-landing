@@ -1,5 +1,5 @@
 @mixin adaptiv-font($pcSize, $mobSize) {
-  font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 1280px) / (2000 - 1280)));
+  font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 1280px) / (720)));
 }
 .about-me {
   margin: 0;
