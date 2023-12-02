@@ -56,6 +56,7 @@
 @media screen and (max-width: 1280px) {
   .skills {
     width: 75%;
+    padding: calc(40px + (91 - 40) * ((100vw - 375px) / (1280 - 375))) 0 calc(40px + (110 - 40) * ((100vw - 375px) / (1280 - 375))) 0;
   }
 }
 
@@ -65,9 +66,16 @@
   }
   .skills__list {
     flex-direction: column;
-    gap: 82px;
+    gap: 50px;
   }
   .skills__item {
     text-align: center;
+  }
+  .skills__title {
+    padding-bottom: 35px;
+  }
+
+  .skills__paragraph-last {
+    padding-bottom: 35px;
   }
 }

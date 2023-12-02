@@ -73,13 +73,24 @@
 }
 
 @media screen and (max-width: 1280px) {
+  .portfolio {
+    padding: calc(40px + (113 - 40) * ((100vw - 375px) / (1280 - 375))) 0 calc(40px + (96 - 40) * ((100vw - 375px) / (1280 - 375))) 0;
+  }
+
   .portfolio__list {
     width: 75%;
+  }
+
+  .portfolio__caption {
+    padding: calc(15px + (45 - 15) * ((100vw - 375px) / (1280 - 375))) 0 0 0;
   }
 }
 
 @media screen and (max-width: 500px) {
   .portfolio__list {
-    width: 84%;
+    width: 90%;
+  }
+  .portfolio__item:not(:first-child) {
+    padding-top: 45px;
   }
 }

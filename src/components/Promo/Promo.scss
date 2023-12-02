@@ -59,6 +59,7 @@
 @media screen and (max-width: 1280px) {
   .promo {
     width: 75%;
+    padding: 0 0 calc(40px + (104 - 40) * ((100vw - 375px) / (1280 - 375))) 0;
   }
 
   .promo__image {
@@ -68,6 +69,6 @@
 
 @media screen and (max-width: 500px) {
   .promo {
-    width: 84%;
+    width: 90%;
   }
 }

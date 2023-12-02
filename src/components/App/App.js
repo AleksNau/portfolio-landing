@@ -1,6 +1,5 @@
 import './App.scss';
-import React, {useEffect, useState} from "react";
-import LoadingPreloader from '../../contexts/loadingContext';
+import React from "react";
 import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
