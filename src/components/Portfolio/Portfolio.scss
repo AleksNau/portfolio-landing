@@ -86,9 +86,15 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .portfolio__list {
+    width: 85%;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .portfolio__list {
-    width: 90%;
+    width: 94%;
   }
   .portfolio__item:not(:first-child) {
     padding-top: 45px;
