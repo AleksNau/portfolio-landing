@@ -1,8 +1,10 @@
 import React from "react";
 import {useForm} from "react-hook-form";
+import {useNavigate} from "react-router-dom";
 import "./Feedback.scss";
 
-const Feedback = () => {
+const Feedback = ({onSubmitBot}) => {
+  const navigate = useNavigate();
   const {
     register,
     formState: {errors, isValid},
@@ -12,7 +14,7 @@ const Feedback = () => {
   } = useForm({mode: "onChange"});
 
   function onSubmit() {
-    console.log(getValues())
+    onSubmitBot(getValues())
   }
     return (
         <div className="feedback">
@@ -21,7 +23,7 @@ const Feedback = () => {
             <div className="underline">
             </div>
 
-            <form action="#" method="post" id="contact_form" onSubmit={handleSubmit(onSubmit)} noValidate>
+            <form action="#" method="post" id="contact_form" onSubmit={handleSubmit(onSubmit)} >
               <div className="name">
                 <label htmlFor="name"></label>
                 <input type="text" placeholder="Имя" id="name_input" {...register('name')} required/>
@@ -49,6 +51,7 @@ const Feedback = () => {
                           required></textarea>
               </div>
               <div className="submit">
+                <input type="button" value="Назад" id="form_button" onClick={() => {navigate("/")}}/>
                 <input type="submit" value="Отправить" id="form_button"/>
               </div>
             </form>
