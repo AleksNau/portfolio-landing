@@ -3,13 +3,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Slider.scss";
 
-import react from "./images/react.png";
-import node from "./images/node.png";
-import sass from "./images/sass.png";
-import redux from "./images/redux.png";
-import html5 from "./images/html5.png";
+import react from "./images/react.svg";
+import node from "./images/node.svg";
+import sass from "./images/sass.svg";
+import redux from "./images/redux.svg";
+import html5 from "./images/html5.svg";
 import postman from "./images/postman.svg";
-import photoshop from "./images/adobePhoto.jpg";
+import photoshop from "./images/adobePhoto.svg";
 
 import React, { Component } from "react";
 import Slider from "react-slick";
