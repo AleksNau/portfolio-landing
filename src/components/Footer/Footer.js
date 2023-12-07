@@ -25,7 +25,7 @@ const Footer = () => {
                     </a>
                 </li>
                 <li className="footer__item">
-                    <a href="https://www.instagram.com/" className="footer__link" target='_blank' rel="noreferrer">
+                    <a href="https://www.instagram.com/aleks.nau" className="footer__link" target='_blank' rel="noreferrer">
                         <img src={insta} alt="icon" className="footer__button"/>
                     </a>
                 </li>

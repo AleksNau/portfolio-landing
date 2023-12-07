@@ -10,23 +10,25 @@
 }
 
 .promo {
+  display: flex;
+  justify-content: space-between;
   width: 65%;
   margin: 0 auto;
-  padding: 0 0 104px 0;
+  padding: 50px 0 104px 0;
 }
 
 .promo__container {
   padding: 40px 0 31px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 40%;
 }
 
 .promo__title {
   @include adaptiv-font(47,45);
   margin: 0;
   color: #070707;
-  max-width: 95px;
+  text-align: left;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #828282;
 
   font-style: normal;
   font-weight: 400;
@@ -37,23 +39,51 @@
   @include adaptiv-font(27,24);
   margin: 0;
   color: #070707;
+  padding: 10px 0;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.promo__paragraph {
+  @include adaptiv-font(20,18);
+  margin: 0;
+  color: #070707;
 
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  padding-bottom: 20px;
 }
 
+
 .promo__image {
-  width: 100%;
+  width: 55%;
   height: calc(387px + (478 - 387) * ((100vw - 375px) / (1445 - 375)));
   object-fit: cover;
+  border-radius: 20px;
   object-position: center top;
 }
 
 .promo__job-conteiner {
   width: 100%;
-  display: flex;
-  justify-content: center;
+}
+
+.promo__lead {
+  @include adaptiv-font(18,16);
+  margin-top: 10px;
+  display: block;
+  width: calc(120px + (180 - 120) * ((100vw - 375px) / (1445 - 375)));
+  height: calc(42px + (50 - 42) * ((100vw - 375px) / (1445 - 375)));
+  background: #4E4E4E;
+  color: #FFF;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1280px) {
