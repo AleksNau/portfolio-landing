@@ -1,8 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
+@mixin adaptiv-font($pcSize, $mobSize) {
+  font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 1280px) / (720)));
+  @media screen and (max-width: 1280px) {
+    font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 375px) / (1280 - 500)));
+  }
+  @media screen and (max-width: 500px) {
+    font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 375px) / (500 - 375)));
+  }
+
+}
+
 .feedback {
   margin: 0;
-  padding: 0 0 0 0;
+  padding: 50px 0 0 0;
 }
 
 html {
@@ -39,8 +50,8 @@ textarea {
 
 #container {
   border: solid 3px #474544;
-  max-width: 768px;
-  margin: 60px auto;
+  max-width: 1010px;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -49,7 +60,7 @@ form {
   margin: 50px 0;
 }
 
-h1 {
+.feedback__title {
   color: #474544;
   font-size: 32px;
   font-weight: 700;
@@ -78,8 +89,12 @@ h1 {
 }
 
 .email {
-  float: right;
   width: 45%;
+}
+
+.feedback__cont {
+  display: flex;
+  justify-content: space-between;
 }
 
 input[type='text'], [type='email'], select, textarea {
@@ -90,7 +105,7 @@ input[type='text'], [type='email'], select, textarea {
   font-size: 1.000em;
   font-weight: 400;
   letter-spacing: 1px;
-  margin: 0em 0 1.875em 0;
+  margin: 0em 0 1.575em 0;
   padding: 0 0 0.875em 0;
   text-transform: uppercase;
   width: 100%;
@@ -116,7 +131,6 @@ input[type='text']:focus, [type='email']:focus, textarea:focus {
 }
 
 .name {
-  float: left;
   width: 45%;
 }
 
@@ -188,16 +202,75 @@ textarea {
   color: #F2F3EB;
 }
 
+.form__error {
+  height: 16px;
+  font-family: 'Inter', ‘Arial’, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #EE3465;
+  padding-bottom: 5px;
+  display: block;
+}
+
+.feedback__back-button {
+  margin-right: 10px;
+}
+@media screen and (max-width: 1920px) {
+  #container {
+    max-width: 49%;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  #container {
+    max-width: 65%;
+  }
+}
+
+
+@media screen and (max-width: 1280px) {
+  .feedback {
+
+  }
+
+  #container {
+    max-width: 75%;
+  }
+
+  .feedback__title {
+    @include adaptiv-font(32,20);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #container {
+    max-width: 85%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #container {
     margin: 20px auto;
     width: 95%;
   }
+  .feedback__title{
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .feedback {
+
+  }
+
+  #container {
+    max-width: 94%;
+  }
 }
 
 @media screen and (max-width: 480px) {
-  h1 {
-    font-size: 26px;
+  .feedback__title {
+    font-size: 24px;
   }
 
   .underline {
@@ -210,7 +283,7 @@ textarea {
 }
 
 @media screen and (max-width: 420px) {
-  h1 {
+  .feedback__title {
     font-size: 18px;
   }
 
@@ -225,17 +298,5 @@ textarea {
 
   input[type='text'], [type='email'], select, textarea {
     font-size: 0.875em;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .feedback {
-
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .feedback {
-
   }
 }

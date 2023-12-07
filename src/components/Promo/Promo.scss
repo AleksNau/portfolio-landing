@@ -18,7 +18,7 @@
 }
 
 .promo__container {
-  padding: 40px 0 31px 0;
+  padding: 0 0 31px 0;
   width: 40%;
 }
 
@@ -89,11 +89,35 @@
 @media screen and (max-width: 1280px) {
   .promo {
     width: 75%;
-    padding: 0 0 calc(40px + (104 - 40) * ((100vw - 375px) / (1280 - 375))) 0;
+    padding: 30px 0 calc(40px + (104 - 40) * ((100vw - 375px) / (1280 - 375))) 0;
   }
 
   .promo__image {
     object-position: center center;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .promo {
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0 0;
+    grid-auto-flow: row;
+    grid-template-areas:
+"image"
+"about";
+  }
+
+  .promo__image {
+    width: 100%;
+    grid-area: image;
+  }
+
+  .promo__container {
+    width: 100%;
+    padding-top: 20px;
+    grid-area: about;
   }
 }
 
@@ -102,3 +126,4 @@
     width: 90%;
   }
 }
+

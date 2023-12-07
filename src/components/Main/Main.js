@@ -9,7 +9,6 @@ const Main = () => {
     return (
         <div className="main">
             <Promo/>
-            <AboutMe/>
             <Skills/>
             <Portfolio/>
         </div>

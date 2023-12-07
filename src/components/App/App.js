@@ -6,12 +6,13 @@ import Feedback from '../Feedback/Feedback';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 import apiTelegram from "../../utils/telegramApi";
+import PageNotFound from "../PageNotFound/PageNotFound";
 
 
 function App() {
     const navigate = useNavigate();
     const {pathname} = useLocation();
-    const pathsWithHeader = ['/', '/feedback'].includes(pathname);
+    const pathsWithHeader = ['/'].includes(pathname);
     const pathsWithFooter = ['/'].includes(pathname);
 
     const onTelegram = (data) => {
@@ -34,6 +35,7 @@ function App() {
             <Routes>
                 <Route path={'/feedback'} element={<Feedback onSubmitBot={onTelegram}/>}/>
                 <Route path={'/'} element={<Main/>}/>
+                <Route path='*' element={<PageNotFound/>}/>
             </Routes>
 
             {pathsWithFooter && (

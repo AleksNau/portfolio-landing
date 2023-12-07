@@ -1,6 +1,6 @@
 .page-not-found {
   margin: 0;
-  padding: 0 0 0 0;
+  padding: 80px 0 0 0;
 }
 
 
@@ -120,7 +120,7 @@ body {
   background-color: #FDFAF5;
   margin-bottom: 50px;
 }
-html, button, input, select, textarea {
+.page-not-found button, input, select, textarea {
   font-family: 'Montserrat', Helvetica, sans-serif;
   color: #bbb;
 }
