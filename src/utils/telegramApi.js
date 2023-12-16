@@ -26,7 +26,7 @@ class telegramApi {
             },
             body: JSON.stringify({
                 "chat_id": `${TELEGRAM_CHAT_ID}`,
-                "text": `Имя ${data.name} и ${data.telephone}`
+                "text": `${data.subject}: Имя ${data.name}, Телефон ${data.telephone}, Сообщение: ${data.message} `
             }),
         }).then(this._checkResponse);
     }

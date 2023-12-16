@@ -23,7 +23,7 @@ function App() {
             })
             .catch(console.error)
             .finally(() => {
-                //navigate("/");
+                navigate("/");
             })
     };
 
