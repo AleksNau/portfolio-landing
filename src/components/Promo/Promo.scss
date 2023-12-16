@@ -1,7 +1,7 @@
 @mixin adaptiv-font($pcSize, $mobSize) {
   font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 1280px) / (720)));
   @media screen and (max-width: 1280px) {
-    font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 375px) / (1280 - 500)));
+    font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 720px) / (1280 - 500)));
   }
   @media screen and (max-width: 500px) {
     font-size: calc(#{$mobSize + px} + #{$pcSize - $mobSize} * ((100vw - 375px) / (500 - 375)));
@@ -18,7 +18,6 @@
 }
 
 .promo__container {
-  padding: 0 0 31px 0;
   width: 40%;
 }
 
@@ -46,7 +45,7 @@
 }
 
 .promo__paragraph {
-  @include adaptiv-font(20,18);
+  @include adaptiv-font(20,16);
   margin: 0;
   color: #070707;
 
@@ -62,7 +61,7 @@
   height: calc(387px + (478 - 387) * ((100vw - 375px) / (1445 - 375)));
   object-fit: cover;
   border-radius: 20px;
-  object-position: center top;
+  object-position: center;
 }
 
 .promo__job-conteiner {
@@ -124,6 +123,9 @@
 @media screen and (max-width: 500px) {
   .promo {
     width: 90%;
+  }
+  .promo__paragraph {
+    font-size: 14px;
   }
 }
 
