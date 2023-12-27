@@ -15,6 +15,8 @@ function App() {
     const pathsWithHeader = ['/'].includes(pathname);
     const pathsWithFooter = ['/'].includes(pathname);
 
+    //Состояния меню
+    const [menuActive, setMenuActive] = React.useState(false);
     const onTelegram = (data) => {
         apiTelegram
             .sendData(data)
@@ -30,7 +32,7 @@ function App() {
     return (
         <div className="App">
             {pathsWithHeader && (
-                <Header/>
+                <Header  active={menuActive} setActive={setMenuActive} />
             )}
             <Routes>
                 <Route path={'/feedback'} element={<Feedback onSubmitBot={onTelegram}/>}/>
